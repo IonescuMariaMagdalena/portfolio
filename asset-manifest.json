@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a48ddcad.css",
+    "main.js": "/portfolio/static/js/main.51a6fbdc.js",
+    "static/js/453.b05d8aa5.chunk.js": "/portfolio/static/js/453.b05d8aa5.chunk.js",
+    "static/media/bg-light.png": "/portfolio/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/portfolio/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/phising.jpg": "/portfolio/static/media/phising.85a185ede1d4a03a315e.jpg",
+    "static/media/me.jpeg": "/portfolio/static/media/me.dbde2d79dc22db35d195.jpeg",
+    "static/media/IMM.png": "/portfolio/static/media/IMM.a48009769857ff877776.png",
+    "static/media/wardrobe.jpg": "/portfolio/static/media/wardrobe.1e77ac9c8bfdd4cf100c.jpg",
+    "static/media/uipathdeveloper.jpeg": "/portfolio/static/media/uipathdeveloper.4a5a733ff45d33e19ced.jpeg",
+    "static/media/uipathbusinessan.jpeg": "/portfolio/static/media/uipathbusinessan.30c627eab1d5a9e0dd6f.jpeg",
+    "static/media/umplut.jpeg": "/portfolio/static/media/umplut.20bd1b74ad6013016d28.jpeg",
+    "static/media/nvidiacertificate.jpeg": "/portfolio/static/media/nvidiacertificate.3bb3d7989a113514588d.jpeg",
+    "static/media/uipathbusinessan.pdf": "/portfolio/static/media/uipathbusinessan.1b702890cfc4c8f49591.pdf",
+    "static/media/uipathdeveloper.pdf": "/portfolio/static/media/uipathdeveloper.445d18b946e831a97289.pdf",
+    "static/media/secureshare.jpeg": "/portfolio/static/media/secureshare.b01ed5eebfd77ac9322f.jpeg",
+    "static/media/nvidiacertificate.pdf": "/portfolio/static/media/nvidiacertificate.e0e02da59b1ba4274243.pdf",
+    "index.html": "/portfolio/index.html",
+    "main.a48ddcad.css.map": "/portfolio/static/css/main.a48ddcad.css.map",
+    "main.51a6fbdc.js.map": "/portfolio/static/js/main.51a6fbdc.js.map",
+    "453.b05d8aa5.chunk.js.map": "/portfolio/static/js/453.b05d8aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a48ddcad.css",
+    "static/js/main.51a6fbdc.js"
+  ]
+}
