@@ -62,12 +62,20 @@ export default function Contact() {
 
       setSnack({open:true, type:'success', text:'Mulțumesc! Mesajul a fost trimis.'});
       setName(''); setReplyTo(''); setMessage('');
+
+      await fetch('/api/contact', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name, replyTo, message })
+});
+
       formRef.current?.reset();
     } catch (err) {
       console.error(err);
       setSnack({open:true, type:'error', text:'Ups — nu am putut trimite acum. Încearcă mai târziu.'});
     }
   };
+  
 
   return (
     <div id="contact">
@@ -146,6 +154,8 @@ export default function Contact() {
           {snack.text}
         </Alert>
       </Snackbar>
+      
     </div>
   );
+  
 }

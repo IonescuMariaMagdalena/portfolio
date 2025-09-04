@@ -55,3 +55,10 @@
 .project-modal .summary { opacity:.9; margin-bottom:10px; }
 .tech-list { margin:6px 0 12px 18px; }
 .close-btn { position:absolute; right:8px; top:8px; }
+
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
+.chip { background:#f3f0ff; }
+.badge { position:absolute; left:12px; top:12px; font-size:.75rem; font-weight:700; padding:4px 8px; border-radius:999px; }
+.badge.ok { background:#e8f5e9; color:#1b5e20; }
+.badge.warn { background:#fff4e5; color:#b45309; }
+.project-modal .hero { width:100%; border-radius:12px; margin:6px 0 12px; }
