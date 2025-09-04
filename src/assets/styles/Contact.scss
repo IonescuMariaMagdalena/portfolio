@@ -1,0 +1,81 @@
+/* Root spacing */
+#contact { padding: 60px 0; }
+
+/* Card curat și lizibil pe orice temă */
+#contact .contact_wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #fff;
+  color: #111;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  text-align: left;
+}
+
+/* Iconițe în text (ex. în heading/lead) */
+#contact .contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Lead text sub titlu */
+#contact .contact_wrapper .lead { margin: 0 0 16px; opacity: .9; }
+
+/* Formular + layout */
+#contact .contact-form { margin-top: 16px; width: 100%; }
+#contact .form-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  padding-bottom: 15px;
+}
+#contact .MuiFormControl-root { width: 100%; }
+
+#contact .body-form {
+  width: 100%;
+  margin: 16px 0;
+}
+
+/* Buton */
+#contact .contact-form button {
+  float: right;
+  background-color: #fff;
+  color: #050f0b;
+  border: 2px solid #5000ca;
+  font-weight: 600;
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+#contact .contact-form button:hover {
+  background-color: #5000ca;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(80,0,202,.25);
+}
+
+/* Fundal alb pentru inputuri (MUI) pe dark mode */
+.dark-mode #contact .MuiOutlinedInput-root { background: #fff; }
+
+/* Păstrăm cardul alb și pe dark mode pentru contrast */
+.dark-mode #contact .contact_wrapper { background: #fff; color: #111; }
+
+/* Label styling (dacă vrei să păstrezi fontul personalizat) */
+#contact label {
+  font-size: 1.05rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+/* Elimină forțările globale care pot strica layout-ul */
+/* NU mai pune: form { width: 100% !important; } în afara secțiunii de contact */
+/* titlul din cardul Contact – vizibil pe alb */
+#contact .contact_wrapper h1 {
+  color: #111 !important;    /* forțăm peste dark mode global */
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+/* subtitlu/lead */
+#contact .contact_wrapper .lead {
+  color: #333;                /* un pic mai deschis decât titlul */
+}

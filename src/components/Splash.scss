@@ -1,0 +1,62 @@
+.splash-root {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1200px 600px at 50% 20%, rgba(80,0,202,.15), transparent),
+              linear-gradient(180deg, #0b0b0e, #0f0f14);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.splash-logo-wrap {
+  display: grid;
+  place-items: center;
+  padding: 24px 28px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 10px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(6px);
+}
+
+.splash-logo {
+  width: 40vw;   /* 40% din lățimea viewport-ului */
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 25px rgba(123,92,255,.8));
+
+}
+
+
+.splash-accent {
+  position: absolute;
+  bottom: 18%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #7b5cff, transparent);
+  transform-origin: center;
+  filter: drop-shadow(0 0 8px rgba(123,92,255,.6));
+}
+
+.splash-fadeout {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: #0b0b0e; /* culoarea fundalului aplicației */
+  opacity: 0;          /* animat de framer-motion */
+}
+
+/* Opțional: mod lumină */
+.light-mode .splash-root {
+  background: radial-gradient(1200px 600px at 50% 20%, rgba(80,0,202,.15), transparent),
+              linear-gradient(180deg, #fafafa, #f2f4f8);
+}
+.light-mode .splash-logo-wrap {
+  background: rgba(0,0,0,0.04);
+}
+
+/* Respectă reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .splash-root, .splash-fadeout, .splash-accent { animation: none !important; transition: none !important; }
+}
