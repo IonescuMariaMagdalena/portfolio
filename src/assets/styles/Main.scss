@@ -153,3 +153,31 @@
         }
     }
 }
+
+/* ===== Tighten spacing between About (#about) and Expertise (#expertise) ===== */
+
+/* 1) Strânge ABOUT (jos) */
+#about {
+  padding-bottom: 8px !important;   /* reduce bottom padding */
+  display: flow-root;               /* previne margin-collapse */
+}
+#about .about__title { margin-bottom: 8px !important; }
+#about .about__underline { margin-top: 6px !important; }
+#about .about__lead { margin-bottom: 0 !important; }
+
+/* 2) Ridică EXPERTISE (sus) */
+#expertise {
+  padding-top: 8px !important;      /* reduce top padding */
+  margin-top: 0 !important;
+  display: flow-root;                /* previne margin-collapse */
+}
+
+/* 3) Titlul din Expertise să nu împingă secțiunea în jos */
+#expertise h1, 
+#expertise h2, 
+#expertise .section-title {
+  margin-top: 0 !important;
+}
+
+/* (opțional) dacă mai vrei încă ~10px: apropiere forțată doar între cele două */
+#about + #expertise { margin-top: -10px; } /* comentează dacă nu e nevoie */

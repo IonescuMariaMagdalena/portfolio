@@ -79,3 +79,18 @@
 #contact .contact_wrapper .lead {
   color: #333;                /* un pic mai deschis decât titlul */
 }
+
+#contact {
+  .contact-form .MuiInputBase-root {
+    background: rgba(255,255,255,0.92);
+    border-radius: 12px;
+  }
+  .contact_wrapper h1 {
+    letter-spacing: .4px;
+  }
+
+  /* badge overlap clarity on small screens */
+  @media (max-width: 600px) {
+    .contact_wrapper { position: relative; }
+  }
+}

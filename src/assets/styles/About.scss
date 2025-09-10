@@ -1,0 +1,180 @@
+/* styles/AboutMe.scss */
+/* ─── THEME TOKENS ─────────────────────────────────────────────────────────── */
+:root {
+  --bg: #ffffff;
+  --text: #0a0a0a;
+  --muted: #5b5b5b;
+  --border: rgba(0,0,0,.10);
+  --elev: rgba(0,0,0,.06);
+  --accent: #6d28d9;  /* violet-700 */
+  --accent-2: #a78bfa; /* violet-300 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --text: #e8e8ea;
+    --muted: #b6b6bb;
+    --border: rgba(255,255,255,.12);
+    --elev: rgba(255,255,255,.06);
+    --accent: #7c3aed;  /* violet-600 */
+    --accent-2: #c4b5fd; /* violet-300 */
+  }
+}
+
+/* Opțional: suport pentru teme forțate cu [data-theme="dark"] pe <html> */
+html[data-theme="dark"] {
+  --bg: #0b0b0c;
+  --text: #e8e8ea;
+  --muted: #b6b6bb;
+  --border: rgba(255,255,255,.12);
+  --elev: rgba(255,255,255,.06);
+  --accent: #7c3aed;
+  --accent-2: #c4b5fd;
+}
+
+/* ─── LAYOUT ───────────────────────────────────────────────────────────────── */
+.about {
+  background: var(--bg);
+  color: var(--text);
+  scroll-margin-top: 6rem;
+  padding: clamp(2.5rem, 4vw, 4rem) clamp(1rem, 4vw, 2.5rem);
+}
+
+.about__container {
+  max-width: 1120px;
+margin: 0 auto;
+margin: 0;                 /* nu mai centra containerul */
+}
+
+@media (max-width: 960px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── TYPOGRAPHY ───────────────────────────────────────────────────────────── */
+/* TYPOGRAPHY */
+.about__title {
+ text-align: center;
+ text-align: left;
+}
+
+.about__tagline {
+ text-align: center;
+ text-align: left;
+}
+
+.about__prose {
+  max-width: 70ch;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+ margin-left: 0;
+ margin-right: 0;
+ text-align: left;
+}
+
+.about__underline {
+ margin: .6rem auto 0 auto;   /* centrat */
+ margin: .6rem 0 0 0;         /* aliniat la stânga sub titlu */
+}
+
+/* Dacă ai adăugat pentru varianta 1: acestea te țin centrată — scoate-le */
+.about__container { justify-content: center; }
+.about__content { text-align: center; justify-self: center; }
+
+.about__prose p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+
+.about__prose strong { font-weight: 650; }
+
+/* Accent keyword (în loc de <mark> galben) */
+.about__accent {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+  padding: 0 .28rem;
+  border-radius: .28rem;
+}
+
+/* ─── HIGHLIGHTS (ATS-friendly) ───────────────────────────────────────────── */
+.about__highlights {
+  margin: 1.1rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: .55rem .9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  font-size: .96rem;
+}
+
+@media (max-width: 640px) {
+  .about__highlights { grid-template-columns: 1fr; }
+}
+
+.about__highlights li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--text);
+}
+
+/* Discuri vizibile în ambele teme */
+.about__highlights li::before {
+  content: "";
+  position: absolute;
+  left: .2rem;
+  top: .55em;
+  width: .45rem;
+  height: .45rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.about__highlights b { font-weight: 650; }
+
+/* ─── ASIDE / PHOTO ───────────────────────────────────────────────────────── */
+.about__aside { padding-left: clamp(.5rem, 1.5vw, 1rem); }
+
+@media (max-width: 960px) {
+  .about__aside { padding-left: 0; }
+}
+
+.about__photo {
+  width: clamp(9.5rem, 26vw, 12.5rem);
+  height: clamp(9.5rem, 26vw, 12.5rem);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 38px -18px var(--elev);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, var(--bg)) 0%, var(--bg) 100%);
+}
+.about__photo img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.about__tags {
+  margin-top: .8rem;
+  display: flex; gap: .6rem; flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+/* ─── ACCESSIBILITY / REDUCED MOTION ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .about__underline { transition: none !important; }
+}
+
+.about__container {
+  justify-content: center; /* centrează grid-ul în container */
+}
+
+.about__content {
+  text-align: center;       /* clasează un wrapper pentru titlu + text */
+  justify-self: center;     /* centrează coloana în grid */
+}

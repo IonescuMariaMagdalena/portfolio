@@ -18,8 +18,9 @@ import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
 
-// ✅ am adăugat "Certifications"
+
 const navItems: [string, string][] = [
+  ['About Me', 'about'],
   ['Expertise', 'expertise'],
   ['Certifications', 'certifications'],
   ['History', 'history'],
@@ -54,7 +55,7 @@ function Navigation({ parentToChild, modeChange }: Props) {
     const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // dacă suntem pe mobil, închidem meniul după click
+      
       if (mobileOpen) setMobileOpen(false);
     } else {
       console.error(`Element with id "${sectionId}" not found`);
@@ -75,7 +76,7 @@ function Navigation({ parentToChild, modeChange }: Props) {
             <ListItemButton
               sx={{ textAlign: 'center' }}
               onClick={(e) => {
-                e.stopPropagation(); // prevenim re-toggle inutil
+                e.stopPropagation(); 
                 scrollToSection(id);
               }}
             >
@@ -92,7 +93,7 @@ function Navigation({ parentToChild, modeChange }: Props) {
       <CssBaseline />
       <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
         <Toolbar className='navigation-bar'>
-          {/* Buton meniu (mobil) */}
+         
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -103,12 +104,12 @@ function Navigation({ parentToChild, modeChange }: Props) {
             <MenuIcon />
           </IconButton>
 
-          {/* Toggle dark/light */}
+         
           {mode === 'dark'
             ? <LightModeIcon onClick={() => modeChange()} />
             : <DarkModeIcon onClick={() => modeChange()} />}
 
-          {/* Linkuri navbar (desktop) */}
+          
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map(([label, id]) => (
               <Button key={id} onClick={() => scrollToSection(id)} sx={{ color: '#fff' }}>
@@ -119,7 +120,7 @@ function Navigation({ parentToChild, modeChange }: Props) {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer mobil */}
+      
       <nav>
         <Drawer
           variant="temporary"

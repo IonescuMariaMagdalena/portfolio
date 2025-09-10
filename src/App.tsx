@@ -6,6 +6,8 @@ import FadeIn from './components/FadeIn';
 import './index.scss';
 import Certifications from "./components/Certifications";
 import Splash from "./components/Splash";
+import About from "./components/About";
+
 
 type ThemeMode = 'dark' | 'light';
 
@@ -33,6 +35,7 @@ export default function App() {
         <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
         <FadeIn transitionDuration={700}>
           <Main />
+          <About />
           <Expertise />
           <Certifications />
           <Timeline />

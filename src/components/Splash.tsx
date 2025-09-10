@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Splash.scss";
-import logo from "../assets/images/IMM.png"; 
+import logo from "../assets/images/IMM-2.png"; 
 type Props = { onFinish: () => void; durationMs?: number };
 
 export default function Splash({ onFinish, durationMs = 1600 }: Props) {
